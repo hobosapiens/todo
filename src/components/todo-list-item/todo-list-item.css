@@ -1,0 +1,13 @@
+.todo-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.todo-list-item button:first-of-type {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.todo-list-item button:first-of-type i {
+    color: #26a69a;
+}

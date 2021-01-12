@@ -1,0 +1,14 @@
+.item-status-filter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-status-filter button {
+    margin-left: 5px;
+    color: #000000;
+}
+
+.item-status-filter button.active {
+    color: #ffffff;
+    background-color: #26a69a !important;
+}
