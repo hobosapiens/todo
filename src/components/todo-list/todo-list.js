@@ -8,7 +8,7 @@ const TodoList = ({todos}) => {
             const { id, ...itemProps } = item;
 
             return (
-                <li key={id} className="list-group-item">
+                <li key={id} className="list-group-item collection-item">
                     <TodoListItem { ...itemProps } />
                 </li>
             )
@@ -17,7 +17,7 @@ const TodoList = ({todos}) => {
 
     return (
         <div className="list-group col s12">
-            <ul className="todo-list">
+            <ul className="todo-list collection">
                 {todoItems}
             </ul>
         </div>
