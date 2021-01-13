@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.todo-list-item-label {
+    cursor: pointer;
+}
+
 .todo-list-item button {
     padding: 0 10px;
 }
