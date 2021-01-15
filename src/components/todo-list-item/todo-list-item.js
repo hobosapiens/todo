@@ -3,31 +3,8 @@ import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
 
-    state = {
-        done: false,
-        important: false
-    };
-
-    onLabelClick = () => {
-        this.setState(({done}) => {
-            return {
-                done: !done
-            }
-        })
-    };
-
-    onMarkImportant = () => {
-        this.setState(({important}) => {
-            return {
-                important: !important
-            }
-        })
-    };
-
     render() {
-
-        const {label, onDeleted} = this.props;
-        const {done, important} = this.state;
+        const {label, done, important, onDeleted, onToggleImportant, onToggleDone} = this.props;
 
         let className = 'todo-list-item';
 
@@ -42,11 +19,11 @@ export default class TodoListItem extends Component {
         return (
             <div className={className}>
                 <span className="todo-list-item-label"
-                      onClick={ this.onLabelClick }>{label}
+                      onClick={ onToggleDone }>{label}
                 </span>
                 <button type="button"
                         className="btn transparent"
-                        onClick={ this.onMarkImportant }>
+                        onClick={ onToggleImportant }>
                     <i className="material-icons">flash_on</i>
                 </button>
                 <button type="button"

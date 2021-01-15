@@ -1,0 +1,14 @@
+.add-item-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.add-item-form input[type='text'] {
+    width: calc(100% - 80px);
+    max-height: 36px;
+}
+
+.add-item-form button {
+    margin-right: 10px;
+}
