@@ -11,9 +11,13 @@ export default class App extends Component {
 
     state = {
         todoData: [
-            this.createNewItem('Drink coffee'),
-            this.createNewItem('Make react App'),
-            this.createNewItem('Have lunch')
+            this.createNewItem('Learn HTML', false, true),
+            this.createNewItem('Learn CSS', false, true),
+            this.createNewItem('Learn JavaScript', false, true),
+            this.createNewItem('Learn Jquery', false, true),
+            this.createNewItem('Learn React', true, true),
+            this.createNewItem('Learn Redux', true, true),
+            this.createNewItem('Find a job', true, false)
         ],
         search: '',
         filter: 'all'
@@ -25,11 +29,11 @@ export default class App extends Component {
         )
     }
 
-    createNewItem(label) {
+    createNewItem(label, important, done) {
         return {
             label: label,
-            important: false,
-            done: false,
+            important: important,
+            done: done,
             id: this.maxId++
         }
     }

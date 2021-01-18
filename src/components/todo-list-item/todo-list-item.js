@@ -19,6 +19,7 @@ export default class TodoListItem extends Component {
         return (
             <div className={className}>
                 <span className="todo-list-item-label"
+                      title={label}
                       onClick={ onToggleDone }>{label}
                 </span>
                 <button type="button"

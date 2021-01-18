@@ -5,9 +5,14 @@
 
 .todo-list-item-label {
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 20px;
+    text-overflow: ellipsis;
 }
 
 .todo-list-item button {
+    width: 40px;
     padding: 0 10px;
 }
 
@@ -28,10 +33,10 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 55%;
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: black;
 }
 
