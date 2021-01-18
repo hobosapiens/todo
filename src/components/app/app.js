@@ -14,7 +14,9 @@ export default class App extends Component {
             this.createNewItem('Drink coffee'),
             this.createNewItem('Make react App'),
             this.createNewItem('Have lunch')
-        ]
+        ],
+        search: '',
+        filter: 'all'
     };
 
     getIndex(id) {
@@ -85,17 +87,47 @@ export default class App extends Component {
         }));
     };
 
+    onSearchChange = (search) => {
+        this.setState({search})
+    };
+
+    onFilterChange = (filter) => {
+        this.setState({filter})
+    };
+
+    search = (items, filter) => {
+        if (filter.length === 0) {
+            return items;
+        }
+        return items.filter(el => {
+            return el.label.toLowerCase().includes(filter.toLowerCase())
+        });
+    };
+
+    filter = (items, filter) => {
+        switch (filter) {
+            case 'all':
+                return items;
+            case 'done':
+                return items.filter(item => item.done);
+            case 'active':
+                return items.filter(item => !item.done);
+        }
+    };
+
     render() {
-        const {todoData} = this.state;
+        const {todoData, search, filter} = this.state;
         const done = todoData.filter(el => el.done).length;
         const toDo = todoData.length - done;
+        const filteredItems = this.filter(
+            this.search(todoData, search), filter);
 
         return (
             <div className="app row">
                 <AppHeader toDo={toDo} done={done}/>
-                <SearchPannel/>
-                <ItemStatusFilter/>
-                <TodoList todos={todoData}
+                <SearchPannel onSearchChange={this.onSearchChange}/>
+                <ItemStatusFilter filter={this.state.filter} onFilterChange={this.onFilterChange}/>
+                <TodoList todos={filteredItems}
                           onDeleted={this.deleteItem}
                           onToggleImportant={this.onToggleImportant}
                           onToggleDone={this.onToggleDone}/>
