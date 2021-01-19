@@ -16,7 +16,7 @@ export default class AddItemForm extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const empty = '';
-        if( this.state.label != empty ){
+        if( this.state.label !== empty ){
             this.props.onAddItem(this.state.label);
             this.setState({
                 label: empty

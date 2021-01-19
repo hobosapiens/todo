@@ -116,6 +116,8 @@ export default class App extends Component {
                 return items.filter(item => item.done);
             case 'active':
                 return items.filter(item => !item.done);
+            default:
+                return items;
         }
     };
 

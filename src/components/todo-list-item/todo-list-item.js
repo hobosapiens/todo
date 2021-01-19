@@ -28,9 +28,9 @@ export default class TodoListItem extends Component {
                     <i className="material-icons">flash_on</i>
                 </button>
                 <button type="button"
-                        className="btn red lighten-1"
+                        className="btn red lighten-2"
                         onClick={ onDeleted }>
-                    <i className="material-icons">cancel</i>
+                    <i className="material-icons">close</i>
                 </button>
             </div>
         )
