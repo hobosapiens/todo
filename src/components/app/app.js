@@ -14,7 +14,7 @@ export default class App extends Component {
             this.createNewItem('Learn HTML', false, true),
             this.createNewItem('Learn CSS', false, true),
             this.createNewItem('Learn JavaScript', false, true),
-            this.createNewItem('Learn Jquery', false, true),
+            this.createNewItem('Learn jQuery', false, true),
             this.createNewItem('Learn React', true, true),
             this.createNewItem('Learn Redux', true, true),
             this.createNewItem('Find a job', true, false)
