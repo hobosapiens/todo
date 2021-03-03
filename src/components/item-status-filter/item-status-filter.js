@@ -12,16 +12,16 @@ export default class ItemStatusFilter extends Component {
     render() {
 
         const buttons = this.buttons.map(({name, label}) => {
-        const isActive = this.props.filter === label;
-        return (
-            <button type="button"
-                    className={`btn transparent ${ isActive && 'active' }`}
-                    key={name}
-                    onClick={() => {
-                        this.props.onFilterChange(name)
-                    }}>{label}
-            </button>
-        )
+            const isActive = this.props.filter === label;
+            return (
+                <button type="button"
+                        className={`btn transparent ${isActive && 'active'}`}
+                        key={name}
+                        onClick={() => {
+                            this.props.onFilterChange(name)
+                        }}>{label}
+                </button>
+            )
         });
 
         return (
