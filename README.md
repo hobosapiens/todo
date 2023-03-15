@@ -1,4 +1,4 @@
-### Study project Todo List
+## Study project Todo List
 
 GitHub pages: https://hobosapiens.github.io/todo/
 
@@ -6,7 +6,7 @@ A simple project completed to freshen up my memories of the basics and syntax of
 And also to get acquainted with the Materialize css framework.
 <br />
 <br />
-## Учебный проект Todo List
+### Учебный проект Todo List
 
 GitHub pages: https://hobosapiens.github.io/todo/
 
